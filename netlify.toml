@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[dev]
+  framework = "vite"
+  targetPort = 5173
+
+# Single-page app routes. Kept narrow on purpose: a catch-all rewrite would
+# shadow the Netlify Server that handles /ws and /api/*.
+[[redirects]]
+  from = "/room/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "camera=(self), microphone=(self), display-capture=()"
