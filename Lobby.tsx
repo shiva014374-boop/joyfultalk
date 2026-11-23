@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, LoaderCircle, LockKeyhole, Mic, MicOff, Phone, TriangleAlert, Video, VideoOff } from 'lucide-react'
-import { AUDIO_CONSTRAINTS, VIDEO_CONSTRAINTS, type StartOptions } from '../lib/call'
-import { saveName, savedName, type CallMode } from '../lib/rooms'
+import { AUDIO_CONSTRAINTS, VIDEO_CONSTRAINTS, type StartOptions } from './call'
+import { saveName, savedName, type CallMode } from './rooms'
 import { Avatar, MediaVideo } from './Media'
 
 type DeviceStatus = 'asking' | 'ready' | 'partial' | 'denied' | 'unsupported'
