@@ -19,16 +19,16 @@ import {
   WifiOff,
   X,
 } from 'lucide-react'
-import { CallEngine, useCall, type CallSnapshot } from '../lib/call'
-import { isValidSecret, toB64url } from '../lib/crypto'
-import { turnOf } from '../lib/game'
-import { navigate } from '../lib/router'
-import { inviteUrl, newRoomPath, type CallMode } from '../lib/rooms'
-import { Logo } from '../components/Logo'
-import { Lobby } from '../components/Lobby'
-import { Avatar, MediaVideo, RemoteAudio } from '../components/Media'
-import { ChatPanel } from '../components/ChatPanel'
-import { GamePanel } from '../components/GamePanel'
+import { CallEngine, useCall, type CallSnapshot } from './call'
+import { isValidSecret, toB64url } from './crypto'
+import { turnOf } from './game'
+import { navigate } from './router'
+import { inviteUrl, newRoomPath, type CallMode } from './rooms'
+import { Logo } from './Logo'
+import { Lobby } from './Lobby'
+import { Avatar, MediaVideo, RemoteAudio } from './Media'
+import { ChatPanel } from './ChatPanel'
+import { GamePanel } from './GamePanel'
 
 export function RoomPage({ roomId }: { roomId: string }) {
   const secret = location.hash.slice(1)
