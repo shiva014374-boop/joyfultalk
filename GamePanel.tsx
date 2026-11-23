@@ -1,6 +1,6 @@
 import { RotateCcw } from 'lucide-react'
-import type { CallEngine, CallSnapshot } from '../lib/call'
-import { turnOf } from '../lib/game'
+import type { CallEngine, CallSnapshot } from './call'
+import { turnOf } from './game'
 import { OMark, XMark } from './Marks'
 
 export function GamePanel({ engine, state }: { engine: CallEngine; state: CallSnapshot }) {
