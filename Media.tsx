@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { MicOff } from 'lucide-react'
-import { useAudioLevel } from '../lib/useAudioLevel'
+import { useAudioLevel } from './useAudioLevel'
 
 export function MediaVideo({ stream, mirrored, className }: { stream: MediaStream | null; mirrored?: boolean; className?: string }) {
   const ref = useRef<HTMLVideoElement>(null)
