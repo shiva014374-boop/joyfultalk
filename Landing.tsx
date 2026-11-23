@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { ArrowRight, Fingerprint, KeyRound, LockKeyhole, MessageSquare, Phone, ShieldCheck, Video } from 'lucide-react'
-import { Logo } from '../components/Logo'
-import { OMark, XMark } from '../components/Marks'
-import { navigate } from '../lib/router'
-import { newRoomPath, parseInvite, saveName, savedName, type CallMode } from '../lib/rooms'
-import { generateRoomSecret, seal, deriveRoomKey } from '../lib/crypto'
+import { Logo } from './Logo'
+import { OMark, XMark } from './Marks'
+import { navigate } from './router'
+import { newRoomPath, parseInvite, saveName, savedName, type CallMode } from './rooms'
+import { generateRoomSecret, seal, deriveRoomKey } from './crypto'
 
 export function Landing() {
   return (
