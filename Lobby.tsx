@@ -192,6 +192,14 @@ export function Lobby({
             autoFocus
           />
         </label>
+        <div style={{display: 'flex', gap: '10px', marginBottom: '12px'}}>
+  <button type="button" onClick={() => { navigator.clipboard.writeText(`Hi! Join my private video call 👇\n${window.location.href}`); alert('Invite link copied!'); }} style={{flex: 1, padding: '14px', borderRadius: '999px', background: '#fff', color: '#000', fontWeight: '700', border: 'none'}}>
+    📋 Copy Invite Link
+  </button>
+  <a href={`https://wa.me/?text=${encodeURIComponent(`Hi! Join my private video call 👇\n${window.location.href}`)}`} target="_blank" rel="noreferrer" style={{flex: 1, padding: '14px', borderRadius: '999px', background: '#25D366', color: '#fff', fontWeight: '700', textAlign: 'center', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    WhatsApp Link
+  </a>
+</div>
         <button className="btn btn-primary btn-wide" onClick={join} disabled={status === 'asking'}>
           Join the room <ArrowRight size={18} />
         </button>
