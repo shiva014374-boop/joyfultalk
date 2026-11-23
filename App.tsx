@@ -1,6 +1,6 @@
-import { Landing } from './pages/Landing'
-import { RoomPage } from './pages/Room'
-import { usePathname } from './lib/router'
+import { Landing } from './Landing'
+import { RoomPage } from './Room'
+import { usePathname } from './router'
 
 export function App() {
   const path = usePathname()
